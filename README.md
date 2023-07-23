@@ -206,7 +206,7 @@ resource "helm_release" "cert_manager" {
 ___
 ___
 
-## 2. Set up ALB Ingress Controller 
+## 4. Set up ALB Ingress Controller 
 
 We have utilized the AWS Application Load Balancer (ALB) Ingress Controller using Helm to streamline traffic routing and SSL termination at the load balancer, thereby improving the security and performance of our application.
 
@@ -255,7 +255,7 @@ resource "helm_release" "ingress" {
 ___
 ___
 
-## Deploy Web Application
+## 5.Deploy Web Application
 
 - Create Kubernetes deployments, statefuleSets and services for web app and databases
 
@@ -297,13 +297,13 @@ spec:
 ___
 ___
 
-## Storage backup 
+## 6. Storage backup 
 
 We write a `python` script [volume_backup.py](./volume_backups.py) to take a backup of the volumes attached to the databases every one day 
 
 ___
 ___
 
-# System architecture diagram
+# 7. System architecture diagram
 
 ![System architecture diagram](./images/system%20diagram.jpg)
